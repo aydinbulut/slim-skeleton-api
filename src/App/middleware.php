@@ -15,7 +15,7 @@ $app->add(function ($request, $response, $next) {
 // Check for JWT Token in Header
 $app->add(new JwtAuthentication([
     "ignore" => ['/auth'],
-    "secret" => $settings['secret'],
+    "secret" =>  $app->getContainer()->get('settings')['secret'],
     "error" => function ($response, $arguments) {
         $data["status"] = "error";
         $data["message"] = $arguments["message"];

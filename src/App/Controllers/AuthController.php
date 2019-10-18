@@ -38,14 +38,14 @@ class AuthController
                 throw new ValidationException($validator);
             }
 
-            $settings = require __DIR__ . '/../../settings.php';
-
+            $secret = $this->container->get('settings')['secret'];
             $token = [
                 'email' => $request->getAttribute('email'),
                 'titme' => time(),
                 'status' => true
             ];
-            $jwt = JWT::encode($token, $settings['secret']);
+
+            $jwt = JWT::encode($token, $secret);
 
             return $response->withJson(JSendResponse::success(['data' => ['jwt' => $jwt]]));
         } catch (ValidationException $e) {
