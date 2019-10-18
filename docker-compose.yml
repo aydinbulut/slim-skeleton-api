@@ -8,7 +8,7 @@ services:
             context: .
             dockerfile: docker/php/Dockerfile
         image: digitalocean.com/php
-        container_name: app
+        container_name: slim-app
         restart: unless-stopped
         tty: true
         environment:
@@ -24,7 +24,7 @@ services:
     #Nginx Service
     webserver:
         image: nginx:alpine
-        container_name: webserver
+        container_name: slim-webserver
         restart: unless-stopped
         ports:
             - "80:80"
@@ -39,7 +39,7 @@ services:
     #MySQL Service
     db:
         image: mysql:5.7.22
-        container_name: db
+        container_name: slim-db
         restart: unless-stopped
         ports:
             - "3306:3306"
