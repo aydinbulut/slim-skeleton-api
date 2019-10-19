@@ -25,6 +25,7 @@ git clone git@github.com:aydinbulut/slim-php-skeleton.git
 
 Run following command in "src/" directory to install dependencies
 ```bash
+cd src
 composer install
 ```
 
@@ -36,6 +37,6 @@ docker-compose up -d
 * You must have Docker desktop application
 * Ensure `logs/` is web writable.
 
-After that, open `http://localhost` in your browser or with a aPI client application like Postman.
+After that, open `http://localhost` in your browser or with an API client application like Postman.
 
 That's it! Now go build something cool.
