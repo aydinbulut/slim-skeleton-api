@@ -1,13 +1,15 @@
 # Slim Framework 3 Skeleton Application
 
-I forked https://github.com/slimphp/Slim-Skeleton because it has Docker ENV. Forked repo uses Slim 4 but in this skeleton I used Slim 3.
-
 Use this skeleton application to quickly setup and start working on a new API application with Slim Framework 3. 
 
 ##Features
-* Phinx: DB migration package. [Documentation](http://docs.phinx.org/en/latest/) for Phinx.
-* Laravel's validator package "illuminate/validation". [Documentation](https://laravel.com/docs/6.x/validation) for validator.
-* 
+* Phinx, DB migration package. [Documentation](http://docs.phinx.org/en/latest/)
+* Laravel's validator package to validate requests easily. [Documentation](https://laravel.com/docs/6.x/validation)
+* Monolog for logging. [Documentation](https://github.com/Seldaek/monolog)
+* Eloquent (Laravel's ActiveRecord style ORM) [Documentation](https://laravel.com/docs/6.x/database)
+* Symfony Debug package [Documentation](https://symfony.com/doc/current/components/debug.html)
+* Slim JWT Auth package to use JWT for auth. [Documentation](https://packagist.org/packages/tuupola/slim-jwt-auth)
+* nannehuiges/jsend A simple PHP implementation of the JSend specification. [Documentation](https://packagist.org/packages/nannehuiges/jsend)
 
 ## Prerequisite
 You must install Docker desktop application for you personal computer.
