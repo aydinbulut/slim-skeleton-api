@@ -16,13 +16,5 @@ $app->get('/', function (Request $request, Response $response) {
 // Auth group
 $app->group('/auth', $authRoutes);
 
-// Example to change content-type
-$app->get('/phpinfo', function (Request $request, Response $response) {
-    ob_start();
-    phpinfo();
-    $phpinfo = ob_get_clean();
-    $response->withHeader('Content-Type', 'text/html')->write($phpinfo);
-});
-
 // Routes for students
 $app->group('/students', $studentRoutes);
