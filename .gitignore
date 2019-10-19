@@ -4,3 +4,4 @@
 /src/logs/*
 !/src/logs/README.md
 /var/cache/*
+src/.env
