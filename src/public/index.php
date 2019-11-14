@@ -14,7 +14,7 @@ require_once '../vendor/autoload.php';
 
 $settings = require __DIR__ . '/../settings.php';
 
-if ($settings['debug'] === true) {
+if ($settings['displayErrorDetails'] === true) {
     Debug::enable();
 }
 

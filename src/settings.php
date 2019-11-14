@@ -24,6 +24,5 @@ return [
         'path' => __DIR__ . '/logs/app_'.date('Y-m-d').'.log',
         'level' => Logger::NOTICE,
     ],
-    'debug' => true,
     'secret' => 'slimphpskletonwitheloquentandmigrationandvalidatorandjwt'
 ];

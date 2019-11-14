@@ -23,3 +23,12 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], Monolog\Logger::DEBUG));
     return $logger;
 };
+
+// Debug, disable Slim's error handling
+unset($container['errorHandler']);
+unset($container['phpErrorHandler']);
+
+if ($container->get('settings')['displayErrorDetails'] !== true) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 0);
+}
